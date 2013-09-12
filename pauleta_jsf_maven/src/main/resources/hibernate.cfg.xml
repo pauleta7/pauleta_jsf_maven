@@ -4,31 +4,39 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory name="session">
-        <!--Configuracoes de conexao com o BD -->
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property><!--Define o driver de conexao com a BD-->
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/semeru_jsf_maven?createDatabaseIfNotExist=true</property>
+        
+        <!-- CONFIGURAÇÕES DE CONEXÃO COM O BD -->
+        
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property><!-- Defino o driver de conexão com o bd -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pauleta_jsf_maven_db?createDatabaseIfNotExist=true</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
-        <!--HABILITA A EXIBICAO DO SQL GERADO PELO HIBERNATE E FORMATA-O-->
+        
+        <!-- HABILITA A EXIBIÇÃO DO SQL GERADO PELO HIBERNATE E FORMATA-O -->
+        
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-        <!--HABILITA A ACTUALIZACAO AUTOMATICA DA ESTRUTURA DE TABELAS PELO HIBERNATE-->
-        <property name="hibernate.hbm2dd1.auto">update</property>
         
-        <!--CONFIGURACOES DO POOL DE CONEXOES-->
+        <!-- HABILITA A ATUALIZAÇÃO AUTOMÁTICA DA ESTRUTURA DE TABELAS PELO HIBERNATE -->
+        
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- CONFIGURAÇÕES DO POOL DE CONEXÕES-->
+        
         <property name="c3p0.min_size">1</property>
         <property name="c3p0.max_size">20</property>
         <property name="c3p0.timeout">300</property>
         <property name="c3p0.max_statements">80</property>
         <property name="c3p0.idle_test_period">300</property>
-        <!--LISTA DE ENTIDADES-->
-        <mapping class="com.mycompany.model.entities.Cidade"/>
-        <mapping class="com.mycompany.model.entities.Endereco"/>
-        <mapping class="com.mycompany.model.entities.Estado"/>
-        <mapping class="com.mycompany.model.entities.Pessoa"/>
+        
+        <!-- LISTA DE ENTIDADES -->
+        <mapping class="com.mycompany.model.entities.Cidade"/>        
+        <mapping class="com.mycompany.model.entities.Endereco"/>      
+        <mapping class="com.mycompany.model.entities.Estado"/>      
+        <mapping class="com.mycompany.model.entities.Pessoa"/>               
         <mapping class="com.mycompany.model.entities.Sexo"/>
         <mapping class="com.mycompany.model.entities.TipoEndereco"/>
         <mapping class="com.mycompany.model.entities.TipoLogradouro"/>
     </session-factory>
-</hibernate-configuration>    
+</hibernate-configuration>

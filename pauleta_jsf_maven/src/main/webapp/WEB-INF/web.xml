@@ -22,8 +22,6 @@
         <param-value>south-street</param-value>  
     </context-param> 
     
-    <!-- Configurações do JavaServer Faces -->
-    
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
@@ -40,8 +38,7 @@
         <url-pattern>*.faces</url-pattern>
     </servlet-mapping>
     
-    <!-- Configurações do PrimeFaces -->
-    
+   
     <servlet>
         <servlet-name>Resource Servlet</servlet-name>
         <servlet-class>org.primefaces.resource.ResourceServlet</servlet-class>
@@ -58,16 +55,5 @@
             <url-pattern>*.xhtml</url-pattern>
         </web-resource-collection>
         <auth-constraint/>
-    </security-constraint>
-    
-    <!-- Filtros de Upload -->
-    
-<!--    <filter>  
-        <filter-name>PrimeFaces FileUpload Filter</filter-name>  
-        <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>  
-    </filter>  
-    <filter-mapping>  
-        <filter-name>PrimeFaces FileUpload Filter</filter-name>  
-        <servlet-name>Faces Servlet</servlet-name>  
-    </filter-mapping> -->
+    </security-constraint>    
 </web-app>    
