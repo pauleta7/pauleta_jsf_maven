@@ -1,5 +1,5 @@
 
-package com.mycompany.model.etities;
+package com.mycompany.model.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -27,11 +27,11 @@ public class Pessoa implements Serializable{
     private Integer idPessoa;
     @Column(name="Name",nullable=false, length=80)
     private String nome;
-    @Column(name="Name",nullable=false, length=80)
-    private String email;
     @Column(name="Email",nullable=false, length=80)
+    private String email;
+    @Column(name="Telefone",nullable=false, length=80)
     private String telefone;
-    @Column(name="Telefone",nullable=false, length=15)
+    @Column(name="Cpf",nullable=false, length=15)
     private String cpf;
     @Column(name="DataDeNascimento",nullable=false, length=14)
     @Temporal(javax.persistence.TemporalType.DATE)
